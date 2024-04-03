@@ -1,14 +1,17 @@
-setTimeout(function timeout() {
-    console.log('T')
-  }, 0)
   
+  console.log('1')
+
+setTimeout(function timeout() {
+    console.log('2')
+  }, 0)
+  // Promise.resolve().then(()=>console.log('3'))
   var p = new Promise(function(resolve, reject) {
-    console.log('F');
+    // console.log('4');
     resolve()
   })
   
   p.then(function() {
-    console.log('L')
+    console.log('5')
   })
   
-  console.log('G')
+  console.log('6')
