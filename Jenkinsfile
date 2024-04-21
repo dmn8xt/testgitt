@@ -1,5 +1,5 @@
 pipeline {
-   agent { docker { image '95a77343608fmyjenkins-blueocean:2.440.3-1' } }
+   agent { docker { image 'myjenkins-blueocean:2.440.3-1' } }
    stages {
 
       stage ('install playwright') {
