@@ -11,8 +11,9 @@ pipeline {
         }
       }   
 
-      stage('e2e-tests') {
+      stage('e2etests') {
          steps {
+            sh 'npm ci'
             sh 'npx playwright test --list'
             sh 'npx playwright test'
          }
