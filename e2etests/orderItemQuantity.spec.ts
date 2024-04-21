@@ -24,5 +24,5 @@ test('test', async ({ page }) => {
   await page.getByLabel('Почтовый индекс').fill('111111');
   await page.getByRole('button', { name: 'Размещение заказа' }).click();
   await page.getByRole('button', { name: 'Размещение заказа' }).click();
-  await page.getByText('Ваш заказ принят. Благодарим вас').click();
+  await expect(page.getByText('Ваш заказ принят. Благодарим вас')).toBeVisible();
 });

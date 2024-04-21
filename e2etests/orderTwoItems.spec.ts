@@ -1,6 +1,10 @@
 import { test, expect } from '@playwright/test';
 
-test('test', async ({ page }) => {
+test('test', async ({ page  }) => {
+  // test.info().annotations.push({
+  //   type: 'browser version',
+  //   description: browser.version(),
+  // });
   await page.goto('https://playwrightshop.ru/shop/');
   await page.getByLabel('Добавить в корзину “Cap”').click();
   await page.getByLabel('Добавить в корзину “Polo”').click();
