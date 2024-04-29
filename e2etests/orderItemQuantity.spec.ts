@@ -23,6 +23,6 @@ test('test', async ({ page }) => {
   await page.getByText('Почтовый индекс', { exact: true }).click();
   await page.getByLabel('Почтовый индекс').fill('111111');
   await page.getByRole('button', { name: 'Размещение заказа' }).click();
-  await page.getByRole('button', { name: 'Размещение заказа' }).click();
+  // await page.getByRole('button', { name: 'Размещение заказа' }).click();
   await expect(page.getByText('Ваш заказ принят. Благодарим вас')).toBeVisible();
 });
